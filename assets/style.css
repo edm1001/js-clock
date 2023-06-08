@@ -20,6 +20,7 @@ body{
     height: 100%;
     text-align: center;
     transform: rotate(var(--rotation));
+    /* create a variable to set each number to a degree much quicker */
 }
 
 .clock .number1 {--rotation: 30deg}
@@ -33,3 +34,31 @@ body{
 .clock .number9 {--rotation: 270deg}
 .clock .number10 {--rotation: 300deg}
 .clock .number11 {--rotation: 330deg}
+
+
+/* style the hand elements hour,min, sec */
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 40%;
+    background-color: black;
+    transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg));
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+}
+.clock .hand.second {
+    width: 3px;
+    height:45%;
+    background-color: red;
+}
+.clock .hand.minute {
+    width:7px;
+    height: 40%;
+    background-color: black;
+}
+
