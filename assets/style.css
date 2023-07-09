@@ -2,7 +2,12 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(#db5a44);
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .clock {
@@ -20,6 +25,7 @@ body{
     height: 100%;
     text-align: center;
     transform: rotate(var(--rotation));
+    font-size: 1.7rem;
     /* create a variable to set each number to a degree much quicker */
 }
 
